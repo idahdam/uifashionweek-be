@@ -12,11 +12,113 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "string"
+    "full_name": {
+      "type": "string",
+      "required": true,
+      "default": "null"
     },
-    "photo": {
-      "model": "file",
+    "nickname": {
+      "type": "string",
+      "required": true,
+      "default": "null"
+    },
+    "sex": {
+      "type": "string",
+      "required": true
+    },
+    "dob": {
+      "type": "string",
+      "required": true
+    },
+    "id_number": {
+      "type": "biginteger"
+    },
+    "profession": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "line_id": {
+      "type": "string",
+      "required": true
+    },
+    "instagram": {
+      "type": "string",
+      "required": true
+    },
+    "height": {
+      "type": "float",
+      "required": true
+    },
+    "weight": {
+      "type": "float",
+      "required": true
+    },
+    "top": {
+      "type": "enumeration",
+      "enum": [
+        "s",
+        "m",
+        "xl",
+        "xxl"
+      ]
+    },
+    "bottom": {
+      "type": "enumeration",
+      "enum": [
+        "s",
+        "m",
+        "xl",
+        "xxl"
+      ]
+    },
+    "shoes": {
+      "type": "float",
+      "required": true
+    },
+    "vaccinated": {
+      "type": "enumeration",
+      "enum": [
+        "once",
+        "twice",
+        "none"
+      ],
+      "required": true
+    },
+    "vaccine_why_when": {
+      "type": "text",
+      "required": true
+    },
+    "in_contact_agency": {
+      "type": "boolean",
+      "required": true
+    },
+    "agency_name": {
+      "type": "string",
+      "default": "-",
+      "required": true
+    },
+    "found_source": {
+      "type": "string",
+      "required": true
+    },
+    "name_and_division": {
+      "type": "string",
+      "required": true
+    },
+    "photos": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images"
