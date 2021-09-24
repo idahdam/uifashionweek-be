@@ -12,58 +12,98 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "full_name": {
-      "type": "string",
-      "required": true,
-      "default": "null"
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "paid",
+        "unpaid"
+      ]
     },
-    "nickname": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "unchecked",
+        "yes_reels",
+        "keep",
+        "no_reels",
+        "reels_posted",
+        "yes_callback"
+      ],
+      "required": true,
+      "default": "unchecked"
+    },
+    "full_name": {
       "type": "string",
       "required": true,
       "default": "null"
     },
     "sex": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "null"
     },
     "dob": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "null"
     },
     "id_number": {
-      "type": "biginteger"
-    },
-    "profession": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "null"
+    },
+    "occupation": {
+      "type": "string",
+      "required": true,
+      "default": "null"
     },
     "address": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "about": {
       "type": "text",
-      "required": true
+      "required": true,
+      "default": "-"
     },
     "email": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "-"
     },
-    "phone": {
+    "wa_number": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "-"
     },
     "line_id": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "-"
     },
     "instagram": {
       "type": "string",
+      "default": "-",
       "required": true
     },
     "height": {
       "type": "float",
+      "default": 0,
       "required": true
     },
-    "weight": {
+    "bust": {
       "type": "float",
+      "default": 0,
       "required": true
+    },
+    "waist": {
+      "type": "float"
+    },
+    "hip": {
+      "type": "float",
+      "required": true,
+      "default": 0
     },
     "top": {
       "type": "enumeration",
@@ -72,7 +112,9 @@
         "m",
         "xl",
         "xxl"
-      ]
+      ],
+      "required": true,
+      "default": "s"
     },
     "bottom": {
       "type": "enumeration",
@@ -84,38 +126,56 @@
       ]
     },
     "shoes": {
-      "type": "float",
-      "required": true
+      "type": "float"
     },
     "vaccinated": {
       "type": "enumeration",
       "enum": [
         "once",
         "twice",
-        "none"
+        "not_yet"
+      ]
+    },
+    "vaccinated_reason": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "currently_under_contract_with_agency": {
+      "type": "enumeration",
+      "enum": [
+        "yes",
+        "no"
       ],
-      "required": true
+      "required": true,
+      "default": "no"
     },
-    "vaccine_why_when": {
-      "type": "text",
-      "required": true
-    },
-    "in_contact_agency": {
-      "type": "boolean",
-      "required": true
-    },
-    "agency_name": {
+    "current_agency_name": {
       "type": "string",
-      "default": "-",
-      "required": true
+      "required": true,
+      "default": "-"
     },
-    "found_source": {
-      "type": "string",
-      "required": true
+    "ever_been_under_contract": {
+      "type": "enumeration",
+      "enum": [
+        "yes",
+        "no"
+      ]
     },
-    "name_and_division": {
-      "type": "string",
-      "required": true
+    "ex_agency_name": {
+      "type": "string"
+    },
+    "find_out_source": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "twitter",
+        "tiktok",
+        "uifwcommittee"
+      ]
+    },
+    "found_from_uifw_committee": {
+      "type": "string"
     },
     "photos": {
       "collection": "file",
@@ -126,6 +186,11 @@
       "plugin": "upload",
       "required": true,
       "pluginOptions": {}
+    },
+    "weight": {
+      "type": "float",
+      "required": true,
+      "default": 0
     }
   }
 }
