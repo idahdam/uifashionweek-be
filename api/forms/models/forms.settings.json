@@ -17,7 +17,8 @@
       "enum": [
         "paid",
         "unpaid"
-      ]
+      ],
+      "required": true
     },
     "status": {
       "type": "enumeration",
@@ -98,7 +99,9 @@
       "required": true
     },
     "waist": {
-      "type": "float"
+      "type": "float",
+      "required": true,
+      "default": 0
     },
     "hip": {
       "type": "float",
@@ -123,10 +126,14 @@
         "m",
         "xl",
         "xxl"
-      ]
+      ],
+      "required": true,
+      "default": "s"
     },
     "shoes": {
-      "type": "float"
+      "type": "float",
+      "required": true,
+      "default": 0
     },
     "vaccinated": {
       "type": "enumeration",
@@ -134,7 +141,9 @@
         "once",
         "twice",
         "not_yet"
-      ]
+      ],
+      "required": true,
+      "default": "once"
     },
     "vaccinated_reason": {
       "type": "string",
@@ -160,10 +169,14 @@
       "enum": [
         "yes",
         "no"
-      ]
+      ],
+      "required": true,
+      "default": "no"
     },
     "ex_agency_name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "-"
     },
     "find_out_source": {
       "type": "enumeration",
@@ -172,10 +185,14 @@
         "twitter",
         "tiktok",
         "uifwcommittee"
-      ]
+      ],
+      "required": true,
+      "default": "instagram"
     },
     "found_from_uifw_committee": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "-"
     },
     "photos": {
       "collection": "file",
