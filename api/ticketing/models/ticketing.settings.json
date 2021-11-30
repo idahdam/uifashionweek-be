@@ -62,6 +62,10 @@
       ],
       "default": "unchecked",
       "required": true
+    },
+    "amount": {
+      "type": "integer",
+      "required": true
     }
   }
 }
