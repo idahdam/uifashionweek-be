@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ticketings",
+  "info": {
+    "name": "Tickets",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "wa_number": {
+      "type": "string",
+      "required": true
+    },
+    "vaccinated": {
+      "type": "enumeration",
+      "enum": [
+        "first_dose",
+        "second_dase"
+      ],
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "ticket_type": {
+      "type": "enumeration",
+      "enum": [
+        "day1_session1",
+        "day1_session2",
+        "day2_session1",
+        "day2_session2",
+        "day1_pass",
+        "day2_pass"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "checked",
+        "unchecked"
+      ],
+      "default": "unchecked",
+      "required": true
+    }
+  }
+}
