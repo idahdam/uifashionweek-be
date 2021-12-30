@@ -24,7 +24,7 @@
       "type": "enumeration",
       "enum": [
         "first_dose",
-        "second_dase"
+        "second_dose"
       ],
       "required": true
     },
