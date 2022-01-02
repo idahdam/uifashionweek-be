@@ -45,12 +45,10 @@
     "ticket_type": {
       "type": "enumeration",
       "enum": [
-        "day1_session1",
-        "day1_session2",
-        "day2_session1",
-        "day2_session2",
-        "day1_pass",
-        "day2_pass"
+        "session_1",
+        "session_2",
+        "session_3",
+        "session_4"
       ],
       "required": true
     },
