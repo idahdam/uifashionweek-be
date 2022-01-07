@@ -42,16 +42,6 @@
       "required": true,
       "pluginOptions": {}
     },
-    "ticket_type": {
-      "type": "enumeration",
-      "enum": [
-        "session_1",
-        "session_2",
-        "session_3",
-        "session_4"
-      ],
-      "required": true
-    },
     "status": {
       "type": "enumeration",
       "enum": [
@@ -64,6 +54,34 @@
     "amount": {
       "type": "integer",
       "required": true
+    },
+    "session_1": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "max": 1,
+      "min": 0
+    },
+    "session_2": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "max": 1,
+      "min": 0
+    },
+    "session_3": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "max": 1,
+      "min": 0
+    },
+    "session_4": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "max": 1,
+      "min": 0
     }
   }
 }
